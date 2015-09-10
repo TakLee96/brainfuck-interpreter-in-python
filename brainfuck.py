@@ -76,10 +76,13 @@ def bf_eval(data, code, index=0):
 
 
 if len(sys.argv) <= 1:
-    while True:
-        code = raw_input("brainfuck> ")
-        bf_eval(Data(), code)
-        sys.stdout.write("\n")
+    if sys.stdin.isatty():
+        while True:
+            code = raw_input("brainfuck> ")
+            bf_eval(Data(), code)
+            sys.stdout.write("\n")
+    else:
+        bf_eval(Data(), sys.stdin.read())
 else:
     with open(sys.argv[1], 'r') as f:
         code = f.read()
