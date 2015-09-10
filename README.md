@@ -2,8 +2,8 @@
 This is a Brainfuck language interpreter written in Python. Memory bytes are simulated using dictionary.
 
 Usage:
-- `Python brainfuck.py` opens up a REPL
-- `Python brainfuck.py [filename.bf]` runs the target file
+- `python brainfuck.py` opens up a REPL
+- `python brainfuck.py [filename.bf]` runs the target file
 
 Note:
 - Each statement in the REPL has a separate enviroment, i.e. dictionary
